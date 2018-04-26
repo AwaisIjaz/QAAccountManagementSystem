@@ -13,9 +13,12 @@ public class Account {
 	
 	@Column(length = 10)
 	private String forename;
-	
+
 	@Column(length = 10)
 	private String surname;
+	
+	@Column(length = 10)
+	private String position;
 	
 	@Column(name = "account_number")
 	private Integer accountNumber;
@@ -43,6 +46,14 @@ public class Account {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
+	
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
 
 	public Integer getAccountNumber() {
 		return accountNumber;
@@ -54,9 +65,11 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", forename=" + forename + ", surname=" + surname + ", accountNumber="
-				+ accountNumber + "]";
+		return "Account [id=" + id + ", forename=" + forename + ", surname=" + surname + ", position=" + position
+				+ ", accountNumber=" + accountNumber + "]";
 	}
+
+	
 	
 	
 	
